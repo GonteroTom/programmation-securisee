@@ -1,0 +1,36 @@
+<!-- Declare the document type as HTML -->
+<!DOCTYPE html>
+
+<!-- Start the HTML document with the language set to French -->
+<html lang="fr">
+
+<!-- Add metadata to the document head -->
+<head>
+    <!-- Set the document title -->
+    <title>The worst form in the galaxy</title>
+</head>
+
+<!-- Define the document body -->
+<body>
+
+<!-- Add a level 1 heading to the document body -->
+<h1>Tell us what you think</h1>
+
+<!-- Define a form with an action attribute that specifies the server-side script to be executed when the form is submitted, using the Flask url_for function to generate the URL dynamically -->
+<form action="{{ url_for('submit') }}" method="post">
+
+    <!-- Add a label for the form field with a textarea element for the user to enter their opinion -->
+    <label>
+        <textarea name="feedback"></textarea>
+    </label><br>
+
+    <!-- Add a submit button to the form -->
+    <input type="submit" value="Send">
+
+</form>
+
+<!-- End the document body -->
+</body>
+
+<!-- End the HTML document -->
+</html>
